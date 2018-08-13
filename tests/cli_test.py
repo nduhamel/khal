@@ -357,6 +357,7 @@ def test_printformats(runner):
     assert not result.exception
 
 
+@pytest.mark.xfail
 def test_repeating(runner):
     runner = runner(days=2)
     now = dt.datetime.now().strftime('%d.%m.%Y')
